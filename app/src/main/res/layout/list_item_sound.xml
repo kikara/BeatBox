@@ -10,17 +10,23 @@
             type="com.bignerdranch.android.beatbox.SoundViewModel" />
     </data>
 
-    <Button
-        style="@style/Widget.AppCompat.Button.Borderless"
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="120dp"
-        android:layout_margin="6dp"
-        android:fontFamily="sans-serif-medium"
-        android:onClick="@{() -> viewModel.onButtonClicked()}"
-        android:text="@{viewModel.title}"
-        android:textAlignment="center"
-        android:textColor="#472ACA"
-        app:iconTint="#FFFFFF"
-        tools:text="Sound Name" />
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        >
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:fontFamily="sans-serif-medium"
+            android:onClick="@{() -> viewModel.onButtonClicked()}"
+            android:text="@{viewModel.title}"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            tools:text="Sound Name" />
+    </FrameLayout>
+
+
 
 </layout>
